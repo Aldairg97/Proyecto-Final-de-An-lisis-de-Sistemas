@@ -1,0 +1,30 @@
+<div class="cliente-container">
+    <h2>Clientes</h2>
+  
+    <button class="btn-agregar" (click)="agregarCliente()">Agregar cliente</button>
+  
+    <table class="tabla-personas">
+      <thead>
+        <tr>
+          <th>ID Cliente</th>
+          <th>Nombre Cliente</th>
+          <th>Teléfono</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of clientes">
+          <td><input type="text" [(ngModel)]="cliente.idCliente"></td>
+          
+          <td><input type="text" [(ngModel)]="cliente.nombreCliente"></td>
+          <td><input type="text" [(ngModel)]="cliente.telefono"></td>
+          <td>
+            <!-- Botones para editar o eliminar -->
+            <button class="btn-editar" (click)="editarCliente(cliente)">Editar</button>
+            <button class="btn-eliminar" (click)="eliminarCliente(cliente)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

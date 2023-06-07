@@ -1,0 +1,56 @@
+.cliente-container {
+    margin-top: 20px;
+  }
+  
+  .btn-agregar {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-editar,
+  .btn-eliminar {
+    padding: 5px 10px;
+    margin-right: 5px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-editar:hover,
+  .btn-eliminar:hover {
+    background-color: #45a049;
+  }
+  
+  .btn-editar:focus,
+  .btn-eliminar:focus {
+    outline: none;
+  }
+  
+  .btn-editar:active,
+  .btn-eliminar:active {
+    background-color: #3e8e41;
+  }
+  
+  .tabla-clientes {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tabla-clientes th,
+  .tabla-clientes td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tabla-clientes th {
+    background-color: #f2f2f2;
+  }
