@@ -1,0 +1,34 @@
+acesso a la pagina
+juan@example.com
+juan
+
+CREATE TABLE usuario (
+  id_usuario INT PRIMARY KEY,
+  nombre VARCHAR(50),
+  email VARCHAR(50)
+);
+
+CREATE TABLE cliente (
+  id_cliente INT PRIMARY KEY,
+  id_usuario INT,
+  nombre_cliente VARCHAR(50),
+  telefono VARCHAR(20),
+  FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
+);
+
+CREATE TABLE vuelo (
+  id_vuelo INT PRIMARY KEY,
+  origen VARCHAR(50),
+  destino VARCHAR(50),
+  fecha_salida DATE,
+  fecha_llegada DATE
+);
+
+CREATE TABLE reserva (
+  id_reserva INT PRIMARY KEY,
+  id_cliente INT,
+  id_vuelo INT,
+  fecha_reserva DATE,
+  FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente),
+  FOREIGN KEY (id_vuelo) REFERENCES vuelo(id_vuelo)
+);
